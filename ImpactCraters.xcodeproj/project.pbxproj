@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		5A7166742488AF3A0022D90E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7166732488AF3A0022D90E /* AppDelegate.swift */; };
 		5A7166762488AF3A0022D90E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7166752488AF3A0022D90E /* SceneDelegate.swift */; };
-		5A7166782488AF3A0022D90E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7166772488AF3A0022D90E /* ViewController.swift */; };
+		5A7166782488AF3A0022D90E /* CraterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7166772488AF3A0022D90E /* CraterListViewController.swift */; };
 		5A71667B2488AF3A0022D90E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7166792488AF3A0022D90E /* Main.storyboard */; };
 		5A71667D2488AF3E0022D90E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A71667C2488AF3E0022D90E /* Assets.xcassets */; };
 		5A7166802488AF3E0022D90E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A71667E2488AF3E0022D90E /* LaunchScreen.storyboard */; };
 		5A71668B2488AF3F0022D90E /* ImpactCratersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71668A2488AF3F0022D90E /* ImpactCratersTests.swift */; };
+		5A7166962488B0FC0022D90E /* CraterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7166952488B0FC0022D90E /* CraterDataSource.swift */; };
+		5A71669824890D770022D90E /* CraterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71669724890D770022D90E /* CraterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +32,7 @@
 		5A7166702488AF3A0022D90E /* ImpactCraters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImpactCraters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7166732488AF3A0022D90E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A7166752488AF3A0022D90E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5A7166772488AF3A0022D90E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A7166772488AF3A0022D90E /* CraterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraterListViewController.swift; sourceTree = "<group>"; };
 		5A71667A2488AF3A0022D90E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A71667C2488AF3E0022D90E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A71667F2488AF3E0022D90E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		5A7166862488AF3F0022D90E /* ImpactCratersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImpactCratersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A71668A2488AF3F0022D90E /* ImpactCratersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactCratersTests.swift; sourceTree = "<group>"; };
 		5A71668C2488AF3F0022D90E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A7166952488B0FC0022D90E /* CraterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraterDataSource.swift; sourceTree = "<group>"; };
+		5A71669724890D770022D90E /* CraterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				5A7166732488AF3A0022D90E /* AppDelegate.swift */,
+				5A71669724890D770022D90E /* CraterCell.swift */,
+				5A7166952488B0FC0022D90E /* CraterDataSource.swift */,
 				5A7166752488AF3A0022D90E /* SceneDelegate.swift */,
-				5A7166772488AF3A0022D90E /* ViewController.swift */,
+				5A7166772488AF3A0022D90E /* CraterListViewController.swift */,
 				5A7166792488AF3A0022D90E /* Main.storyboard */,
 				5A71667C2488AF3E0022D90E /* Assets.xcassets */,
 				5A71667E2488AF3E0022D90E /* LaunchScreen.storyboard */,
@@ -200,8 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A7166782488AF3A0022D90E /* ViewController.swift in Sources */,
+				5A7166782488AF3A0022D90E /* CraterListViewController.swift in Sources */,
+				5A7166962488B0FC0022D90E /* CraterDataSource.swift in Sources */,
 				5A7166742488AF3A0022D90E /* AppDelegate.swift in Sources */,
+				5A71669824890D770022D90E /* CraterCell.swift in Sources */,
 				5A7166762488AF3A0022D90E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
