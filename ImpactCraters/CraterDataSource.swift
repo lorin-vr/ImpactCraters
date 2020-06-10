@@ -6,10 +6,16 @@
 //  Copyright © 2020 Lorin. All rights reserved.
 //
 
+import UIKit
+
 struct Crater {
     let name: String
     let country: String
     let diameterInKm: Float
+    
+    var icon: UIImage {
+        return UIImage(systemName: "circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 10.0)) ?? UIImage()
+    }
 }
 
 struct CraterDataSource {

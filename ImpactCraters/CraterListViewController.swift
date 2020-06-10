@@ -32,12 +32,12 @@ class CraterListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let craterCell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CraterCell
-        
+                
+        craterCell?.icon.image = CraterDataSource.craters[indexPath.row].icon
         craterCell?.name.text = CraterDataSource.craters[indexPath.row].name
         craterCell?.diameter.text = "\(CraterDataSource.craters[indexPath.row].diameterInKm)"
         
         return craterCell ?? UITableViewCell()
-    }
-    
+    }    
 }
 
