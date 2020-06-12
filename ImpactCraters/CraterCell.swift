@@ -22,4 +22,11 @@ class CraterCell: UITableViewCell {
         iconContainer.backgroundColor = paleGrey
         iconContainer.layer.cornerRadius = 5.0
     }
+    
+    func update(crater: Crater) {
+        name.text = crater.name
+        diameter.text = "\(crater.diameterInKm)"
+        icon.image = crater.icon
+        
+    }
 }
