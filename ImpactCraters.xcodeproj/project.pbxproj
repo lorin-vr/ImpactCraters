@@ -16,6 +16,7 @@
 		5A71668B2488AF3F0022D90E /* ImpactCratersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71668A2488AF3F0022D90E /* ImpactCratersTests.swift */; };
 		5A7166962488B0FC0022D90E /* CraterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7166952488B0FC0022D90E /* CraterDataSource.swift */; };
 		5A71669824890D770022D90E /* CraterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71669724890D770022D90E /* CraterCell.swift */; };
+		5ADC4C46249488CC00FA3338 /* ThemeColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC4C45249488CC00FA3338 /* ThemeColours.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		5A71668C2488AF3F0022D90E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A7166952488B0FC0022D90E /* CraterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraterDataSource.swift; sourceTree = "<group>"; };
 		5A71669724890D770022D90E /* CraterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraterCell.swift; sourceTree = "<group>"; };
+		5ADC4C45249488CC00FA3338 /* ThemeColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColours.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		5A7166722488AF3A0022D90E /* ImpactCraters */ = {
 			isa = PBXGroup;
 			children = (
+				5ADC4C442494887500FA3338 /* Helpers */,
 				5A7166732488AF3A0022D90E /* AppDelegate.swift */,
 				5A71669724890D770022D90E /* CraterCell.swift */,
 				5A7166952488B0FC0022D90E /* CraterDataSource.swift */,
@@ -103,6 +106,14 @@
 				5A71668C2488AF3F0022D90E /* Info.plist */,
 			);
 			path = ImpactCratersTests;
+			sourceTree = "<group>";
+		};
+		5ADC4C442494887500FA3338 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5ADC4C45249488CC00FA3338 /* ThemeColours.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				5A7166782488AF3A0022D90E /* CraterListViewController.swift in Sources */,
 				5A7166962488B0FC0022D90E /* CraterDataSource.swift in Sources */,
 				5A7166742488AF3A0022D90E /* AppDelegate.swift in Sources */,
+				5ADC4C46249488CC00FA3338 /* ThemeColours.swift in Sources */,
 				5A71669824890D770022D90E /* CraterCell.swift in Sources */,
 				5A7166762488AF3A0022D90E /* SceneDelegate.swift in Sources */,
 			);

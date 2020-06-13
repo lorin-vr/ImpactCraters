@@ -14,10 +14,7 @@ struct Crater {
     let diameterInKm: Float
     
     var icon: UIImage {
-        let orangeLightest = UIColor(red: 255/255.0, green: 178/255.0, blue: 102/255.0, alpha: 1)
-        let orangeMedium = UIColor(red: 255/255.0, green: 153/255.0, blue: 51/255.0, alpha: 1)
-        let orangeDark = UIColor(red: 255/255.0, green: 128/255.0, blue: 0/255.0, alpha: 1)
-        let orangeDarkest = UIColor(red: 204/255.0, green: 102/255.0, blue: 0/255.0, alpha: 1)
+
         
         let pointSize: CGFloat
         let color: UIColor
@@ -25,19 +22,19 @@ struct Crater {
         switch (diameterInKm) {
              case 0 ..< 1:
                  pointSize = 10.0
-                 color = orangeDarkest
+                 color = ThemeColours.smallCraterColour
              case 1 ..< 5:
                 pointSize = 20.0
-                 color = orangeDark
+                 color = ThemeColours.largeCraterColour
              case 5 ..< 20:
                  pointSize = 30.0
-                 color = orangeMedium
+                 color = ThemeColours.largerCraterColour
              case 20 ... 10_000:
                  pointSize = 40.0
-                 color = orangeLightest
+                 color = ThemeColours.largestCraterColour
              default:
                  pointSize = 40.0
-                 color = orangeLightest
+                 color = ThemeColours.largestCraterColour
              }
         
         guard var image = UIImage(systemName: "circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: pointSize)) else {
