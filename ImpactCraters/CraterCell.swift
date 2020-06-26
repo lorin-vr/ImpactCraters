@@ -22,9 +22,8 @@ class CraterCell: UITableViewCell {
     }
     
     func update(crater: Crater) {
-        name.text = crater.name
+        name.text = "\(crater.name) - \(crater.country)"
         diameter.text = "\(crater.diameterInKm)"
         icon.image = crater.icon
-        
     }
 }
