@@ -1,7 +1,7 @@
 # ImpactCraters
-Project to play around with SF Symbols
+A project to play around with SF Symbols.
 
-![ImpactCraters Demo](demo/ImpactCraters_demo.gif)
+![ImpactCraters Demo](demo/ImpactCraters_demo.png)
 
 ## Requirements
 * Xcode 11.3 or higher
