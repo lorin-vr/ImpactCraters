@@ -14,28 +14,16 @@ struct Crater {
     let diameterInKm: Float
     
     var icon: UIImage {
-
+        var pointSize: CGFloat
+        let color: UIColor = ThemeColours.largeCraterColour
         
-        let pointSize: CGFloat
-        let color: UIColor
+        pointSize = CGFloat(diameterInKm/CraterDataSource.maxDiameter * 42)
+        if pointSize < 5 {
+            pointSize = 5.0
+        }
         
-        switch (diameterInKm) {
-             case 0 ..< 1:
-                 pointSize = 10.0
-                 color = ThemeColours.smallCraterColour
-             case 1 ..< 5:
-                pointSize = 20.0
-                 color = ThemeColours.largeCraterColour
-             case 5 ..< 20:
-                 pointSize = 30.0
-                 color = ThemeColours.largerCraterColour
-             case 20 ... 10_000:
-                 pointSize = 40.0
-                 color = ThemeColours.largestCraterColour
-             default:
-                 pointSize = 40.0
-                 color = ThemeColours.largestCraterColour
-             }
+        // Logging
+        print(name, pointSize)
         
         guard var image = UIImage(systemName: "circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: pointSize)) else {
             return UIImage()
@@ -50,7 +38,7 @@ struct Crater {
 struct CraterDataSource {
     
     static let craters: [Crater] = [
-        Crater(name: "Vredefort", country: "South Africa", diameterInKm: 300),
+//        Crater(name: "Vredefort", country: "South Africa", diameterInKm: 300),
         Crater(name: "Chicxulub", country: "Mexico", diameterInKm: 150),
         Crater(name: "Sudbury", country: "Canada", diameterInKm: 130),
         Crater(name: "Popigai", country: "Russia", diameterInKm: 100),
@@ -116,4 +104,16 @@ struct CraterDataSource {
         Crater(name: "Rio Cuarto (disputed)", country: "Argentina", diameterInKm: 4.5),
         Crater(name: "Ilumetsa", country: "Estonia", diameterInKm: 0.08)
     ]
+    
+    static var maxDiameter: Float {
+        return cratersSortedByDiameter
+            .first?
+            .diameterInKm ?? 0.0
+    }
+    
+    private static var cratersSortedByDiameter: [Crater] {
+        return craters.sorted {
+            $0.diameterInKm > $1.diameterInKm
+        }
+    }
 }
