@@ -13,13 +13,15 @@ struct Crater {
     let country: String
     let diameterInKm: Float
     
+    private let smallestIconPointSizeAllowed: CGFloat = 5.0
+    
     var icon: UIImage {
         var pointSize: CGFloat
         let color: UIColor = ThemeColours.largeCraterColour
         
         pointSize = CGFloat(diameterInKm/CraterDataSource.maxDiameter * 42)
-        if pointSize < 5 {
-            pointSize = 5.0
+        if pointSize < smallestIconPointSizeAllowed {
+            pointSize = smallestIconPointSizeAllowed
         }
         
         // Logging
